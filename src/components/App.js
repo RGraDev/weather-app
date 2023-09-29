@@ -1,14 +1,14 @@
 import "../styles/App.css";
 import LocationDetails from "./LocationDetails";
-import ForecastSummary from "./ForecastSummary";
+import ForecastSummaries from "./ForecastSummaries";
 
-function App({ location }) {
-  const { city, country } = location;
+function App(props) {
+  const { forecasts, location } = props;
 
   return (
     <div className="app">
-      <LocationDetails city={city} country={country} />
-      <ForecastSummary />
+      <LocationDetails city={location.city} country={location.country} />
+      <ForecastSummaries forecasts={forecasts} />
     </div>
   );
 }
