@@ -1,7 +1,7 @@
 import React from "react";
 import ForecastSummary from "./ForecastSummary";
 
-function ForecastSummaries({forecasts}) {
+function ForecastSummaries({ forecasts }) {
   return (
     <div className="forecast-summaries">
       {forecasts.map((forecast) => (
