@@ -10,9 +10,11 @@ function ForecastSummary(props) {
       <div className="forecast-summary__icon" data-testid="forecast-icon">
         {icon}
       </div>
-      <div className="forecast-summary__temperature">{temperature}&deg;C</div>
+      <div className="forecast-summary__temperature">
+        {temperature.max}&deg;C
+      </div>
     </div>
-  )
+  );
 }
 
 export default ForecastSummary;

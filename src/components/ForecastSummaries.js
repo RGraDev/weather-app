@@ -1,6 +1,8 @@
 import React from "react";
 import ForecastSummary from "./ForecastSummary";
 
+import "../styles/ForecastSummaries.css";
+
 function ForecastSummaries({ forecasts }) {
   return (
     <div className="forecast-summaries">
@@ -10,7 +12,7 @@ function ForecastSummaries({ forecasts }) {
           date={forecast.date}
           description={forecast.description}
           icon={forecast.icon}
-          temperature={forecast.temperature.max}
+          temperature={forecast.temperature}
         />
       ))}
     </div>

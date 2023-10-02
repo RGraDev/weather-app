@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "@testing-library/react";
 import ForecastSummary from "../components/ForecastSummary";
 
-describe("ForecastSummary", function() {
+describe("ForecastSummary", function () {
   const validProps = {
     date: 1111111,
     description: "Stub Description",
@@ -13,26 +13,26 @@ describe("ForecastSummary", function() {
     },
   };
 
-  it("renders correctly", function() {
+  it("renders correctly", function () {
     const { asFragment } = render(
       <ForecastSummary
         date={validProps.date}
         description={validProps.description}
         icon={validProps.icon}
-        temperature={validProps.temperature.max}
+        temperature={validProps.temperature}
       />,
     );
 
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it("renders correct values for props", function() {
+  it("renders correct values for props", function () {
     const { getByText, getByTestId } = render(
       <ForecastSummary
         date={validProps.date}
         description={validProps.description}
         icon={validProps.icon}
-        temperature={validProps.temperature.max}
+        temperature={validProps.temperature}
       />,
     );
 
