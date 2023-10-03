@@ -3,7 +3,7 @@
 exports[`ForecastDetails renders correctly  1`] = `
 <DocumentFragment>
   <div
-    class="forecast=details"
+    class="forecast-details"
   >
     <div
       class="forecast-details__date"
@@ -26,27 +26,27 @@ exports[`ForecastDetails renders correctly  1`] = `
     <div
       class="forecast-details__min-temp"
     >
-      12°C
+      Min Temp: 12°C
     </div>
     <div
       class="forecast-details__max-temp"
     >
-      22°C
+      Max Temp: 22°C
     </div>
     <div
       class="forecast-details__humidity"
     >
-      30
+      Humidity: 30
     </div>
     <div
       class="forecast-details__wind-speed"
     >
-      23mph
+      Wind Speed: 23mph
     </div>
     <div
       class="forecast-details__wind-direction"
     >
-      S
+      Wind Direction: S
     </div>
   </div>
 </DocumentFragment>

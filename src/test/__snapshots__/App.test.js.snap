@@ -9,53 +9,6 @@ exports[`App renders App component correctly 1`] = `
       Manchester, UK
     </h1>
     <div
-      class="forecast=details"
-    >
-      <div
-        class="forecast-details__date"
-      >
-        Mon Apr 30 2018
-      </div>
-      <div
-        class="forecast-details__description"
-      >
-        Clear
-      </div>
-      <div
-        class="forecast-details__icon"
-      >
-        <img
-          alt="weather icon"
-          src="https://openweathermap.org/img/wn/04d@2x.png"
-        />
-      </div>
-      <div
-        class="forecast-details__min-temp"
-      >
-        4°C
-      </div>
-      <div
-        class="forecast-details__max-temp"
-      >
-        11°C
-      </div>
-      <div
-        class="forecast-details__humidity"
-      >
-        30
-      </div>
-      <div
-        class="forecast-details__wind-speed"
-      >
-        13mph
-      </div>
-      <div
-        class="forecast-details__wind-direction"
-      >
-        S
-      </div>
-    </div>
-    <div
       class="forecast-summaries"
     >
       <div
@@ -86,6 +39,11 @@ exports[`App renders App component correctly 1`] = `
         >
           11°C
         </div>
+        <button
+          type="button"
+        >
+          More Details
+        </button>
       </div>
       <div
         class="forecast-summary"
@@ -115,6 +73,11 @@ exports[`App renders App component correctly 1`] = `
         >
           13°C
         </div>
+        <button
+          type="button"
+        >
+          More Details
+        </button>
       </div>
       <div
         class="forecast-summary"
@@ -144,6 +107,11 @@ exports[`App renders App component correctly 1`] = `
         >
           1°C
         </div>
+        <button
+          type="button"
+        >
+          More Details
+        </button>
       </div>
       <div
         class="forecast-summary"
@@ -173,6 +141,11 @@ exports[`App renders App component correctly 1`] = `
         >
           20°C
         </div>
+        <button
+          type="button"
+        >
+          More Details
+        </button>
       </div>
       <div
         class="forecast-summary"
@@ -202,6 +175,58 @@ exports[`App renders App component correctly 1`] = `
         >
           25°C
         </div>
+        <button
+          type="button"
+        >
+          More Details
+        </button>
+      </div>
+    </div>
+    <div
+      class="forecast-details"
+    >
+      <div
+        class="forecast-details__date"
+      >
+        Mon Apr 30 2018
+      </div>
+      <div
+        class="forecast-details__description"
+      >
+        Clear
+      </div>
+      <div
+        class="forecast-details__icon"
+      >
+        <img
+          alt="weather icon"
+          src="https://openweathermap.org/img/wn/04d@2x.png"
+        />
+      </div>
+      <div
+        class="forecast-details__min-temp"
+      >
+        Min Temp: 4°C
+      </div>
+      <div
+        class="forecast-details__max-temp"
+      >
+        Max Temp: 11°C
+      </div>
+      <div
+        class="forecast-details__humidity"
+      >
+        Humidity: 30
+      </div>
+      <div
+        class="forecast-details__wind-speed"
+      >
+        Wind Speed: 13mph
+      </div>
+      <div
+        class="forecast-details__wind-direction"
+      >
+        Wind Direction: S
       </div>
     </div>
   </div>
