@@ -1,19 +1,37 @@
 import "../styles/App.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 import LocationDetails from "./LocationDetails";
 import ForecastSummaries from "./ForecastSummaries";
 import ForecastDetails from "./ForecastDetails";
 
-function App({ forecasts, location }) {
-  const [selectedDate, setSelectedDate] = useState(forecasts[0].date);
+function App() {
+  const [forecasts, setForecasts] = useState([]);
+  const [location, setLocation] = useState({ city: "", country: "" });
+  const [selectedDate, setSelectedDate] = useState(0);
+
+  const getForecast = () => {
+    const endpoint =
+      "https://cmd-shift-weather-app.onrender.com/forecast?city=Pewsey";
+    axios.get(endpoint).then((response) => {
+      setSelectedDate(response.data.forecasts[0].date);
+      setForecasts(response.data.forecasts);
+      setLocation(response.data.location);
+    });
+  };
+
+  useEffect(() => {
+    console.log("Retrieving forecast...");
+    getForecast();
+  }, []);
 
   const selectedForecast = forecasts.find(
     (forecast) => forecast.date === selectedDate,
   );
 
-  function handleForecastSelect(date) {
+  const handleForecastSelect = (date) => {
     setSelectedDate(date);
-  }
+  };
 
   return (
     <div className="weather-app">
@@ -22,7 +40,7 @@ function App({ forecasts, location }) {
         forecasts={forecasts}
         onForecastSelect={handleForecastSelect}
       />
-      <ForecastDetails forecast={selectedForecast} />
+      {selectedForecast && <ForecastDetails forecast={selectedForecast} />}
     </div>
   );
 }

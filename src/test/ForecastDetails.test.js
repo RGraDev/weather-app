@@ -16,7 +16,7 @@ describe("ForecastDetails", function () {
         direction: "s",
       },
       humidity: 30,
-    }
+    },
   };
 
   it("renders correctly ", function () {

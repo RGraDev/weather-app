@@ -5,9 +5,7 @@ import { location, forecasts } from "../data/forecast.json";
 
 describe("App", () => {
   test("renders App component correctly", () => {
-    const { asFragment } = render(
-      <App forecasts={forecasts} location={location} />,
-    );
+    const { asFragment } = render(<App />);
 
     expect(asFragment()).toMatchSnapshot();
   });
